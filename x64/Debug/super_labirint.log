@@ -1,0 +1,4 @@
+﻿  Game.cpp
+C:\Users\T1950\Desktop\super_labirint\Game.cpp(34,13): warning C4101: exception: неиспользованная локальная переменная
+C:\Users\T1950\Desktop\super_labirint\Game.cpp(41,13): warning C4101: exception: неиспользованная локальная переменная
+  super_labirint.vcxproj -> C:\Users\T1950\Desktop\super_labirint\x64\Debug\super_labirint.exe

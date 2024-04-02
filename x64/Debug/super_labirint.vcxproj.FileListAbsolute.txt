@@ -1,0 +1,3 @@
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\x64\Debug\super_labirint.exe
+E:\super_labirint\x64\Debug\super_labirint.exe
+C:\Users\T1950\Desktop\super_labirint\x64\Debug\super_labirint.exe
