@@ -29,6 +29,7 @@ void Game::move(ACTIONS act) {
 	try {//все в одом трае
 		Cell* t = map.getCell(main_hero.getI(), main_hero.getJ());
 		map.getMaze()[main_hero.getI()][main_hero.getJ()] = *t - main_hero;
+		//тест специально для коммита на флешку
 		delete t;
 		Cell* t = map.getCell(ip,jp);
 		map.getCell(ip,jp) = *t + main_hero;

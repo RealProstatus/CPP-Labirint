@@ -1,4 +1,21 @@
-﻿  Game.cpp
-C:\Users\T1950\Desktop\super_labirint\Game.cpp(34,13): warning C4101: exception: неиспользованная локальная переменная
-C:\Users\T1950\Desktop\super_labirint\Game.cpp(41,13): warning C4101: exception: неиспользованная локальная переменная
-  super_labirint.vcxproj -> C:\Users\T1950\Desktop\super_labirint\x64\Debug\super_labirint.exe
+﻿  Cell.cpp
+  Coin.cpp
+  Exit.cpp
+  Game.cpp
+  Hero.cpp
+  HeroCell.cpp
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Game.cpp(31,7): error C2039: "getMaze": не является членом "Labirint".
+  C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Labirint.h(10,7):
+   см. объявление "Labirint"
+  
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Game.cpp(33,9): error C2374: t: переопределение; множественная инициализация
+  C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Game.cpp(30,9):
+   см. объявление "t"
+  
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Game.cpp(34,14): error C2106: =: левый операнд должен быть левосторонним значением
+  Labirint.cpp
+  main.cpp
+  VoidCell.cpp
+  Wall.cpp
+  Создание кода...
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Labirint.cpp(50): warning C4715: Labirint::operator=: значение возвращается не при всех путях выполнения
