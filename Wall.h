@@ -5,7 +5,6 @@
 class Wall :public Cell {
 public:
 	Wall();
-	Wall(int _i, int _j);
 
 	virtual Cell* copy();
 

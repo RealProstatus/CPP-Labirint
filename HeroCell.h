@@ -6,7 +6,6 @@
 class HeroCell :public Cell {
 public:
 	HeroCell();
-	HeroCell(int _i, int _j);
 
 	virtual Cell* copy();
 

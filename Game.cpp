@@ -26,22 +26,23 @@ void Game::move(ACTIONS act) {
 	default:
 		break;
 	}
-	try {//все в одом трае
+	try {
+		Cell* tmp = map.getCell(ip, jp);
+		map.getMaze()[ip][jp] = *tmp + main_hero;
+		delete tmp;
 		Cell* t = map.getCell(main_hero.getI(), main_hero.getJ());
 		map.getMaze()[main_hero.getI()][main_hero.getJ()] = *t - main_hero;
-		//тест специально для коммита на флешку
 		delete t;
-		Cell* t = map.getCell(ip,jp);
-		map.getCell(ip,jp) = *t + main_hero;
-		delete t;
+		main_hero.setI(ip);
+		main_hero.setJ(jp);
 	}
-	catch (int exception) {;}
-	catch (string exception) { cout << exception; }
-	main_hero.setI(ip);
-	main_hero.setJ(jp);
+	catch (ERR_StepInWall) { main_hero.subHP(); }
+	catch (ERR_StepInMonster) { main_hero.subHP(); }
+	catch (ERR_Unexpected exc) { exc.show(); }
 }
 void Game::update(ostream& output) {
 	system("cls");
+	output << "HP: " << main_hero.getHP() << endl;
 	output << "Coins: " << main_hero.getCoins()<<endl;
-	output << map;
+	output << endl << map;
 }

@@ -15,29 +15,34 @@ int main() {
 	unsigned int val = 0;
 	val = _getch();
 	while (val != 27) {
-		val = _getch();
-		if (val == 224) val = _getch();
-		switch (val) {
-		case 80:
-			game.move(DOWN);
-			game.update(cout);
-			break;
-		case 72:
-			game.move(UP);
-			game.update(cout);
-			break;
+		try{
+			val = _getch();
+			if (val == 224) val = _getch();
+			switch (val) {
+			case 80:
+				game.move(DOWN);
+				game.update(cout);
+				break;
+			case 72:
+				game.move(UP);
+				game.update(cout);
+				break;
 
-		case 75:
-			game.move(LEFT);
-			game.update(cout);
-			break;
-		case 77:
-			game.move(RIGHT);
-			game.update(cout);
-			break;
+			case 75:
+				game.move(LEFT);
+				game.update(cout);
+				break;
+			case 77:
+				game.move(RIGHT);
+				game.update(cout);
+				break;
 
-		default:
-			break;
+			default:
+				break;
+			}
 		}
+		catch (ERR_HPZero exc) { system("cls"); exc.show(); return 0; }
+		catch (ERR_Exit exc) { system("cls"); exc.show(); }
+		catch (ERR_Victory exc) { system("cls"); exc.show(); return 0; }
 	}
 }

@@ -5,7 +5,6 @@
 class Exit :public Cell {
 public:
 	Exit();
-	Exit(int _i, int _j);
 
 	virtual Cell* copy();
 

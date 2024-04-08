@@ -1,5 +1,6 @@
 #pragma once
 
+#include"ERR_Exception.h"
 #include"Labirint.h"
 #include"Hero.h"
 

@@ -1,12 +1,14 @@
 #include"Exit.h"
 
-Exit::Exit() { i = j = -1; }
-Exit::Exit(int _i, int _j) { i = _i; j = _j; }
+Exit::Exit() { ; }
 
 Cell* Exit::copy() { return new Exit(); }
 
 ostream& Exit::visit(ostream& output) { output << '0'; return output; }
 bool Exit::canSetHero() { return true; }
 
-Cell* Exit::operator+(Hero& hero) { throw "Victory!"; }
-Cell* Exit::operator-(Hero& hero) { throw 1; }
+Cell* Exit::operator+(Hero& hero) {
+	if (hero.getCoins() >= 3) throw ERR_Victory();
+	else throw ERR_Exit();
+}
+Cell* Exit::operator-(Hero& hero) { return new Exit(); }

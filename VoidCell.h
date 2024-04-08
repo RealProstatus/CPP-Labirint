@@ -5,7 +5,6 @@
 class VoidCell :public Cell {
 public:
 	VoidCell();
-	VoidCell(int _i, int _j);
 
 	virtual Cell* copy();
 

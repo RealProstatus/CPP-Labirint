@@ -7,7 +7,6 @@
 class Coin :public Cell {
 public:
 	Coin();
-	Coin(int _i, int _j);
 
 	virtual Cell* copy();
 

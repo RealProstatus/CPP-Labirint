@@ -27,6 +27,8 @@ Labirint::~Labirint() {
 	delete[] maze;
 }
 
+Cell*** Labirint::getMaze() { return maze; }
+
 Cell* Labirint::getCell(int i, int j) { return maze[i][j]; }
 //возвращать ссылку на €чейку, a не тройной указатель
 
@@ -63,19 +65,34 @@ istream& operator>>(istream& input, Labirint& labirint) {
 			input >> noskipws >> tmp;
 			switch (tmp) {
 			case ' ':
-				labirint.maze[i][j] = new VoidCell(i, j);
+				labirint.maze[i][j] = new VoidCell();
 				break;
 			case '#':
-				labirint.maze[i][j] = new Wall(i, j);
+				labirint.maze[i][j] = new Wall();
 				break;
 			case '@':
-				labirint.maze[i][j] = new Coin(i, j);
+				labirint.maze[i][j] = new Coin();
 				break;
 			case '0':
-				labirint.maze[i][j] = new Exit(i, j);
+				labirint.maze[i][j] = new Exit();
 				break;
 			case 'R':
-				labirint.maze[i][j] = new HeroCell(i, j);
+				labirint.maze[i][j] = new HeroCell();
+				break;
+			case '5':
+				labirint.maze[i][j] = new Monster(5);
+				break;
+			case '4':
+				labirint.maze[i][j] = new Monster(4);
+				break;
+			case '3':
+				labirint.maze[i][j] = new Monster(3);
+				break;
+			case '2':
+				labirint.maze[i][j] = new Monster(2);
+				break;
+			case '1':
+				labirint.maze[i][j] = new Monster(1);
 				break;
 			default:
 				break;
