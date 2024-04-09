@@ -16,8 +16,7 @@ public:
 	Labirint(const Labirint& labirint);
 	~Labirint();
 
-	Cell*** getMaze();
-	Cell* getCell(int i, int j);
+	Cell*& getCell(int i, int j);
 
 	Labirint& operator=(const Labirint& labirint);
 	friend istream& operator>>(istream& input, Labirint& labirint);

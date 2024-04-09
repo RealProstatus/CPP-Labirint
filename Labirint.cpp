@@ -27,11 +27,7 @@ Labirint::~Labirint() {
 	delete[] maze;
 }
 
-Cell*** Labirint::getMaze() { return maze; }
-
-Cell* Labirint::getCell(int i, int j) { return maze[i][j]; }
-//возвращать ссылку на €чейку, a не тройной указатель
-
+Cell*& Labirint::getCell(int i, int j) { return maze[i][j]; }
 
 Labirint& Labirint::operator=(const Labirint& labirint) {
 	if (this == &labirint) return *this;

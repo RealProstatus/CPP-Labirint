@@ -1,3 +1,6 @@
-﻿  Labirint.cpp
-C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Labirint.cpp(52): warning C4715: Labirint::operator=: значение возвращается не при всех путях выполнения
+﻿  Game.cpp
+  Labirint.cpp
+  main.cpp
+  Создание кода...
+C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\Labirint.cpp(48): warning C4715: Labirint::operator=: значение возвращается не при всех путях выполнения
   super_labirint.vcxproj -> C:\Users\Иван\Desktop\ННГУ\ООП\Проекты\super_labirint\x64\Debug\super_labirint.exe

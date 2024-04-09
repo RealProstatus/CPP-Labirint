@@ -28,10 +28,10 @@ void Game::move(ACTIONS act) {
 	}
 	try {
 		Cell* tmp = map.getCell(ip, jp);
-		map.getMaze()[ip][jp] = *tmp + main_hero;
+		map.getCell(ip, jp) = *tmp + main_hero;
 		delete tmp;
 		Cell* t = map.getCell(main_hero.getI(), main_hero.getJ());
-		map.getMaze()[main_hero.getI()][main_hero.getJ()] = *t - main_hero;
+		map.getCell(main_hero.getI(), main_hero.getJ()) = *t - main_hero;
 		delete t;
 		main_hero.setI(ip);
 		main_hero.setJ(jp);
