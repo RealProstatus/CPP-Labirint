@@ -129,24 +129,28 @@
   <ItemGroup>
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="ERR_Exception.h" />
     <ClInclude Include="Exit.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Hero.h" />
     <ClInclude Include="HeroCell.h" />
     <ClInclude Include="Labirint.h" />
+    <ClInclude Include="Model.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="VoidCell.h" />
     <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Exit.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hero.cpp" />
     <ClCompile Include="HeroCell.cpp" />
     <ClCompile Include="Labirint.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="VoidCell.cpp" />
     <ClCompile Include="Wall.cpp" />

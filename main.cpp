@@ -1,48 +1,25 @@
 #include<iostream>
 #include<fstream>
 #include<conio.h>
-#include"Game.h"
+#include"Model.h"
+#include"Controller.h"
 
 int main() {
 	Hero mouse;
-	Game game(mouse);
+	Model game(mouse);
+	Controller c(&game);
+
+	ShowMap viewMap(cout);
+	ShowHP viewHP(cout);
+	ShowCoins viewCoins(cout);
+	game.addNewObserver(&viewHP);
+	game.addNewObserver(&viewCoins);
+	game.addNewObserver(&viewMap);
+
 	{
 		ifstream file("maze.txt");
-		game.finputMap(file);
+		game.inputMap(file);
 	}
-	game.update(cout);
-	
-	unsigned int val = 0;
-	val = _getch();
-	while (val != 27) {
-		try{
-			val = _getch();
-			if (val == 224) val = _getch();
-			switch (val) {
-			case 80:
-				game.move(DOWN);
-				game.update(cout);
-				break;
-			case 72:
-				game.move(UP);
-				game.update(cout);
-				break;
 
-			case 75:
-				game.move(LEFT);
-				game.update(cout);
-				break;
-			case 77:
-				game.move(RIGHT);
-				game.update(cout);
-				break;
-
-			default:
-				break;
-			}
-		}
-		catch (ERR_HPZero exc) { system("cls"); exc.show(); return 0; }
-		catch (ERR_Exit exc) { system("cls"); exc.show(); }
-		catch (ERR_Victory exc) { system("cls"); exc.show(); return 0; }
-	}
+	c.start();
 }
